@@ -1,4 +1,5 @@
-# VÔ ĐÂY THÌ M LM CON CHÓ TAO ĐI THK SV THÍCH BÚ CODE Timport sys
+# VÔ ĐÂY THÌ M LM CON CHÓ TAO ĐI THK SV THÍCH BÚ CODE T
+import sys
 import os
 os.system('clear')
 import requests
