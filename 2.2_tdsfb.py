@@ -2,39 +2,12 @@ import requests, json, base64, os, uuid, re
 from time import sleep
 from random import randint
 from datetime import datetime
-import requests, json, base64, os, uuid, re
-from time import sleep
-from random import randint
-from datetime import datetime
-do = "\033[1;91m"
-xanhbien = "\033[1;36m"
-vang = "\033[0;33m"
-hong = "\033[1;35m"
-xanhduong = "\033[1;20m"
-xanhla = "\033[1;32m"
-xanh="\033[1;32m"
-cam="\033[1;33m"
-blue="\033[1;20m"
-lam="\033[1;20m"
-tim="\033[1;20m"
-syan="\033[1;36m"
-xnhac= "\033[1;96m"
-den="\033[1;90m"
-luc="\033[1;92m"
-xduong="\033[1;94m"
-trang="\033[1;97m"
-den = "\033[1;90m"
-luc = "\033[1;32m"
-trang = "\033[1;37m"
 red = "\033[1;31m"
-do = "\033[1;31m"
+luc = "\033[1;32m"
 vang = "\033[1;33m"
+trang = "\033[1;37m"
 tim = "\033[1;35m"
-lamd = "\033[1;20m"
 lam = "\033[1;36m"
-tim = "\033[35m"
-RESET = "\033[0m"
-hong = "🌸"
 thanh = f'{red}[{trang}</>{red}] {trang}=>'
 listnv = []
 listck = []
@@ -45,52 +18,52 @@ def read_proxy_file(filename):
             return [line.strip() for line in f if line.strip()]
     except:
         return []
-        
+    
 def thanhngang(so):
     for i in range(so):
         print(trang+'-',end ='')
     print('')
 
 def banner():
-    os.system("cls" if os.name == "nt" else "clear")
-    banner = f"""
-                  {trang}{hong}© Bản Quyền PhuocAn ! Tool Lỏ !!!
-                  
-\033[1;37m\033[1m██████╗ ██╗  ██╗██╗   ██╗ ██████╗  ██████╗                                            
-\033[32;5;245m\033[1m\033[38;5;39m██████╔╝███████║██║   ██║██║   ██║██║                         
-\033[1;32m\033[1m██╔═══╝ ██╔══██║██║   ██║██║   ██║██║                           
-\033[1;34m\033[1m██║     ██║  ██║╚██████╔╝╚██████╔╝╚██████╗                      
-\033[1;30m\033[1m╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ 
-\033[1;36m╠═══════════════════════════════════════════════╣
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mNhóm   : \033[38;5;20mhttps://zalo.me/g/mprgxe166         \033[1;36m║
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mFaceBook : \033[38;5;204mfacebook.com/phuocan.9999         \033[1;36m║
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mYoutube : \033[38;5;204myoutube.com/@phuocan.9999          \033[1;36m║
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mZalo : \033[38;5;1204m0915.948.201                          \033[1;36m║
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mTool Do PhuocAn Code 😆                      \033[1;36m║
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mAnh Nhắc Em Nha , Đừng Bug 😭                \033[1;36m║
-\033[1;36m║\033[38;5;204m▶ \033[38;5;204mPhiên Bản Tool : 5.0 ( VIP )                 \033[1;36m║
-\033[1;36m╚═══════════════════════════════════════════════╝
-"""
-    print(banner)
-    thanhngang(65)
-    print(f'''{thanh} {luc}Admin{luc}: {tim}{hong}PhuocAn
-{thanh} {luc}Code By{trang}: {tim}{hong}Đàm Hữu Phước
-{thanh} {luc}Bạn Đang Sử Dụng Tool{trang}: {vang}{hong}Trao Đổi Sub Facebook Lỏ 😭''')
-    thanhngang(65)
- 
+    os.system('cls' if os.name=='nt' else 'clear')
+    print(f''' 
+         Trao Đổi Sub Facebook         
+''')
+
+
 def Delay(value):
-	while not(value <= 1):
-		value -= 0.123
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}█    {trang}] {hong}{trang}[,{xanhduong}HEHE]''', '               ', end = '\r')
-		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [ {vang}█   {trang}]{hong}{trang}[,{xanhduong}HEHE]''', '               ', end = '\r')
-		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [  {vang}█  {trang}]{hong}{trang}[,{xanhduong}HEHE]''', '               ', end = '\r')
-		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [   {vang}█ {trang}]{hong}{trang}[,{xanhduong}HEHE]''', '               ', end = '\r')
-		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [    {vang}█{trang}]{hong}{trang}[,{xanhduong}HEHE]''', '               ', end = '\r')
-		sleep(0.010)
+    total = value
+    bar_len = 24  # Chiều dài thanh
+    step = 0
+
+    def rgb(r, g, b): return f"\033[38;2;{r};{g};{b}m"
+
+    while value > 0:
+        done = int(((total - value) / total) * bar_len)
+        todo = bar_len - done
+
+        # Gradient động: đổi dần từ xanh mint → xanh dương
+        bar = "["
+        for i in range(bar_len):
+            if i < done:
+                # Hiệu ứng màu từng khối # đã hoàn thành
+                t = (step + i) % 100 / 100
+                r = int(160 + (0 - 160) * t)
+                g = int(231 + (128 - 231) * t)
+                b = int(229 + (255 - 229) * t)
+                bar += f"{rgb(r, g, b)}#{'\033[0m'}"
+            else:
+                bar += "."
+        bar += "]"
+
+        print(bar, end='\r')
+        sleep(0.1)
+        value -= 0.1
+        step += 3  # Đổi màu dần mỗi lần lặp
+
+    print(" " * (bar_len + 10), end='\r')  # Xóa dòng sau khi xong
+
+
 def decode_base64(encoded_str):
 	decoded_bytes = base64.b64decode(encoded_str)
 	decoded_str = decoded_bytes.decode('utf-8')
@@ -101,7 +74,7 @@ def encode_to_base64(_data):
 	base64_bytes = base64.b64encode(byte_representation)
 	base64_string = base64_bytes.decode('utf-8')
 	return base64_string
-()
+
 class Facebook_Api(object):
     def __init__(self, cookie, proxy=None):
         try:
@@ -610,13 +583,13 @@ def Nhap_Cookie():
     return listck
 
 def Nhap_Setting():
-    apikey = input(f'{thanh} {luc}Nhập Apikey 3xcaptcha Để Auto Add Cấu Hình (Enter để bỏ qua) {trang}: {vang}')
-    min = int(input(f'{thanh} {luc}Nhập Delay Min {trang}: {vang}'))
-    max = int(input(f'{thanh} {luc}Nhập Delay Max {trang}: {vang}'))
-    nvblock = int(input(f'{thanh} {luc}Sau Bao Nhiêu Nhiệm Vụ Thì Chống Block {trang}: {vang}'))
-    delaybl = int(input(f'{thanh} {luc}Sau {vang}{nvblock} {luc}Nhiệm Vụ Thì Nghỉ Ngơi {trang}: {vang}'))
-    doinick = int(input(f'{thanh} {luc}Sau Bao Nhiêu Nhiệm Vụ Thì Đổi Nick {trang}: {vang}'))
-    nhiemvuloi = int(input(f'{thanh} {luc}Lỗi Bao Nhiêu Nhiệm Vụ Thì Xóa Cookie {trang}: {vang}'))
+    apikey = input(f'{thanh} {luc}Nhập Apikey 3xcaptcha Để Auto Add Cấu Hình (Enter để bỏ qua){trang}: {vang}')
+    min = int(input(f'{thanh} {luc}Nhập Delay Min{trang}: {vang}'))
+    max = int(input(f'{thanh} {luc}Nhập Delay Max{trang}: {vang}'))
+    nvblock = int(input(f'{thanh} {luc}Sau Bao Nhiêu Nhiệm Vụ Thì Chống Block{trang}: {vang}'))
+    delaybl = int(input(f'{thanh} {luc}Sau {vang}{nvblock} {luc}Nhiệm Vụ Thì Nghỉ Ngơi{trang}: {vang}'))
+    doinick = int(input(f'{thanh} {luc}Sau Bao Nhiêu Nhiệm Vụ Thì Đổi Nick{trang}: {vang}'))
+    nhiemvuloi = int(input(f'{thanh} {luc}Lỗi Bao Nhiêu Nhiệm Vụ Thì Xóa Cookie{trang}: {vang}'))
     config = {
         "apikey": apikey,
         "min": min,
@@ -630,7 +603,7 @@ def Nhap_Setting():
         json.dump(config, f)
     return config
 
-def Main():  
+def Main():
     ptool = 0
     dem = 0
     count = 0
@@ -682,14 +655,9 @@ def Main():
                 if chon == '2':
                     os.remove('acc_tds_log.txt')
                 elif chon == '1':
-                     pass
-                     print(f"\n{trang}{trang}ĐANG TẢI VUI LÒNG CHỜ TÍ NHA⏰")
-                     for i in range(1, 101):
-                      sys.stdout.write(f"\r{trang}{tranh}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
-                      sys.stdout.flush()
-                      time.sleep(0.003)  # Điều chỉnh thời gian chờ nếu cần
+                    pass
                 else:
-                    print(f'{thanh} {red}Vui Lòng Chọn Đúng Số!')
+                    print(f'{thanh} {red}Vui Lòng Chọn Đúng')
                     thanhngang(70)
                     continue
             except:
@@ -707,34 +675,30 @@ def Main():
         try:
             user = profile[1]
             xu = profile[2]
-            print(f'''{thanh} {luc}Trạng Thái Acc{trang}: {trang}[{luc}Acc còn sống{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {luc}Đăng Nhập Thành Công''')
+            print(f'''{thanh} {luc}Trạng Thái Acc{trang}: {trang}[{luc}LIVE{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {luc}Đăng Nhập Thành Công''')
             break
         except:
-            print(f'''{thanh} {luc}Trạng Thái Acc{trang}: {trang}[{red}Bị fb cho cút{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {do}Đăng Nhập Thất Bại''')
+            print(f'''{thanh} {luc}Trạng Thái Acc{trang}: {trang}[{red}DIE{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {luc}Đăng Nhập Thất Bại''')
             thanhngang(70)
             os.remove('acc_tds_log.txt')
     thanhngang(70)
     while True:
         if os.path.exists('Cookie_FB.txt'):
-            print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để log cookie fb cũ 🔫')
-            print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Để thay cookie mới 🔫')
+            print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Sử Dụng Cookie Facebook Đã Lưu')
+            print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Nhập Cookie Facebook Mới')
             thanhngang(70)
             chon = input(f'{thanh} {luc}Nhập{trang}: ')
             thanhngang(70)
             if chon == '1':
                 print(f'{luc}Đang Lấy Dữ Liệu Đã Lưu')
-                # Hiệu ứng tải
-                for i in range(1, 101):
-                 sys.stdout.write(f"\r{trang}{trang}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
-                 sys.stdout.flush()
-                 sleep(3)  # Điều chỉnh thời gian chờ nếu cần
+                sleep(0)
                 with open('Cookie_FB.txt', 'r') as f:
                     listck = json.loads(f.read())
                     break
             elif chon == '2':
                 os.remove('Cookie_FB.txt')
             else:
-                print(f'{thanh} {red}Mù à?Nhập lại giùm!')
+                print(f'{thanh} {red}Vui Lòng Chọn Đúng')
                 thanhngang(70)
                 continue
         if not os.path.exists('Cookie_FB.txt'):
@@ -743,24 +707,24 @@ def Main():
                 json.dump(listck, f)
             break
     banner()
-    print(f'{thanh} {luc}Tên Tài khoản TDS{trang}: {vang}{user}')
-    print(f'{thanh} {luc}Xu Hiện Tại Đang Có{trang}: {vang}{str(format(int(xu),","))}')
-    print(f'{thanh} {luc}Số Cookie Facebook Đã Nhập{trang}: {vang}{len(listck)}')
+    print(f'{thanh} {luc}Tên Tài khoản{trang}: {vang}{user}')
+    print(f'{thanh} {luc}Xu Hiện Tại{trang}: {vang}{str(format(int(xu),","))}')
+    print(f'{thanh} {luc}Số Facebook{trang}: {vang}{len(listck)}')
     print(f'{thanh} {luc}Trạng Thái Proxy{trang}: {vang}{myip}')
     thanhngang(70)
-    print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để Chạy Job REACTIONXUCAO')
-    print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Để Chạy Job REACTIONCMT')
-    print(f'{thanh} {luc}Nhập {red}[{vang}3{red}] {luc}Để Chạy Job SHAREXUCAO')
-    print(f'{thanh} {luc}Nhập {red}[{vang}4{red}] {luc}Để Chạy Job FOLLOWXUCAO')
-    print(f'{thanh} {luc}Nhập {red}[{vang}5{red}] {luc}Để Chạy Job LIKEPAGECAO')
-    print(f'{thanh} {luc}Nhập {red}[{vang}6{red}] {luc}Để Chạy Job GROUPXUCAO')
-    print(f'{thanh} {luc}Nhập {red}[{vang}7{red}] {luc}Để Chạy Job SHARETHUONG')
-    print(f'{thanh} {luc}Nhập {red}[{vang}8{red}] {luc}Để Chạy Job LIKEPAGETHUONG')
-    print(f'{thanh} {luc}Nhập {red}[{vang}9{red}] {luc}Để Chạy Job LIKETHUONG')
-    print(f'{thanh} {luc}Nhập {red}[{vang}0{red}] {luc}Để Chạy Job REACTIONTHUONG')
-    print(f'{thanh} {lam}Có Thể Chọn Nhiều Nhiệm Vụ (Ví Dụ: 12345...)')
+    print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để Chạy Nhiệm Vụ Cảm Xúc Vip')
+    print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Để Chạy Nhiệm Vụ Cảm Xúc Cmt Vip')
+    print(f'{thanh} {luc}Nhập {red}[{vang}3{red}] {luc}Để Chạy Nhiệm Vụ Share Vip')
+    print(f'{thanh} {luc}Nhập {red}[{vang}4{red}] {luc}Để Chạy Nhiệm Vụ Follow Vip')
+    print(f'{thanh} {luc}Nhập {red}[{vang}5{red}] {luc}Để Chạy Nhiệm Vụ Like Page Vip')
+    print(f'{thanh} {luc}Nhập {red}[{vang}6{red}] {luc}Để Chạy Nhiệm Vụ Tham Gia Group')
+    print(f'{thanh} {luc}Nhập {red}[{vang}7{red}] {luc}Để Chạy Nhiệm Vụ Share Thường')
+    print(f'{thanh} {luc}Nhập {red}[{vang}8{red}] {luc}Để Chạy Nhiệm Vụ Like Page Thường')
+    print(f'{thanh} {luc}Nhập {red}[{vang}9{red}] {luc}Để Chạy Nhiệm Vụ Like Thường')
+    print(f'{thanh} {luc}Nhập {red}[{vang}0{red}] {luc}Để Chạy Nhiệm Vụ Cảm Xúc Thường')
+    print(f'{thanh} {lam}Có Thể Chọn Nhiều Nhiệm Vụ (Ví Dụ: 123...)')
     thanhngang(70)
-    nhap = input(f'{thanh} {luc}Nhập Số Để Chọn JOB {luc}: ')
+    nhap = input(f'{thanh} {luc}Nhập Số Để Chọn Nhiệm Vụ{trang}: ')
     if '' in nhap:
         nhap = nhap.replace('','')
     listnv.append(nhap)
@@ -775,15 +739,15 @@ def Main():
             delaybl = config['delaybl']
             doinick = config['doinick']
             nhiemvuloi = config['nhiemvuloi']
-            print(f'{thanh} {luc}Đã Thấy Cấu Hình Cũ Lúc Trước ♥')
+            print(f'{thanh} {luc}Đã Thấy Cấu Hình Cũ')
             print(f'{thanh} {luc}Api Key 3xCapcha{trang}: {vang}{apikey}')
-            print(f'{thanh} {luc} Min{trang}: {vang}{min}')
-            print(f'{thanh} {luc} Max{trang}: {vang}{max}')
-            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc} Bao Nhiêu Job Thì Chống Block')
-            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc} Bao Nhiêu Job Thì Nghỉ Ngơi {vang}{delaybl}')
-            print(f'{thanh} {luc}Sau {vang}{doinick} {luc} Bao Nhiêu JobThì Đổi Nick')
-            print(f'{thanh} {luc}Lỗi {vang}{nhiemvuloi} {luc}Bao Nhiêu Job Thì Đổi Job Khác')
-        chon = input(f'{thanh} {luc}Bạn Có Muốn Sử Dụng Cấu Hình Lúc Trước? {red}({vang}y/n{red}){trang}: {vang}')
+            print(f'{thanh} {luc}Delay Min{trang}: {vang}{min}')
+            print(f'{thanh} {luc}Delay Max{trang}: {vang}{max}')
+            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc}Nhiệm Vụ Thì Chống Block')
+            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc}Nhiệm Vụ Thì Nghỉ Ngơi {vang}{delaybl}')
+            print(f'{thanh} {luc}Sau {vang}{doinick} {luc}Nhiệm Vụ Thì Đổi Nick')
+            print(f'{thanh} {luc}Lỗi {vang}{nhiemvuloi} {luc}Nhiệm Vụ Thì Đổi Nhiệm Vụ')
+        chon = input(f'{thanh} {luc}Bạn Có Muốn Sử Dụng Cấu Hình Cũ Không? {red}({vang}y/n{red}){trang}: {vang}')
         if chon == 'y':
             apikey = config['apikey']
             min = config['min']
@@ -813,11 +777,11 @@ def Main():
         delaybl = config['delaybl']
         doinick = config['doinick']
         nhiemvuloi = config['nhiemvuloi']
-    chonan = input(f'{thanh} {luc}Bạn Muốn Ẩn ID Fb Không?{red}({vang}y/n{red}){trang}: {vang}')
+    chonan = input(f'{thanh} {luc}Bạn Có Muốn Ẩn Id Facebook Không {red}({vang}y/n{red}){trang}: {vang}')
     thanhngang(70)
     while True:
         if len(listck) == 0:
-            print(f'{red}Đã Xoá Tất Cả Cookie Do Cookie Die, Vui Lòng Nhập Lại Cookie Mới')
+            print(f'{red}Đã Xoá Tất Cả Cookie, Vui Lòng Nhập Lại')
             listck = Nhap_Cookie()
             with open('Cookie_FB.txt', 'w') as f:
                 json.dump(listck, f)
@@ -858,19 +822,19 @@ def Main():
                 uid = info['id']
             else:
                 uid = ck.split('c_user=')[1].split(';')[0]
-                print(f'{red}Cookie Tài Khoản {uid} Bị Mark Cho Cút', end='\r');sleep(0); print('                                     ', end = '\r' )
+                print(f'{red}Cookie Tài Khoản {uid} Die', end='\r');sleep(0); print('                                     ', end = '\r' )
                 listck.remove(ck)
                 continue
             if chonan == 'y':
-                uid2 = uid[:4]+'#'*(len(uid)-6)+uid[-4:]
+                uid2 = uid[:3]+'#'*(len(uid)-6)+uid[-3:]
             else:
                 uid2 = uid
             cauhinh = tds.facebook_configuration(uid)
             if cauhinh == True:
-                print(f'{luc}Id FB{trang}: {vang}{uid2} {red}| {luc}Tên FB{trang}: {vang}{name}')
+                print(f'{luc}Id Facebook{trang}: {vang}{uid2} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
             else:
                 if apikey:
-                    print(f'{luc}Đang Thêm Id FB{trang}: {vang}{uid} {red}| {luc}Tên FB{trang}: {vang}{name}')
+                    print(f'{luc}Đang Thêm Id Facebook{trang}: {vang}{uid} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
                     get_g_recaptcha_response = tds.get_g_recaptcha_response(apikey)
                     if get_g_recaptcha_response[0] == True:
                         # print(f"DEBUG: Kết quả reCAPTCHA: {get_g_recaptcha_response}")
@@ -878,21 +842,21 @@ def Main():
                         if add_uid[0] == True:
                             cauhinh = tds.facebook_configuration(uid)
                             if cauhinh == True:
-                                print(f'{luc}Id FB{trang}: {vang}{uid2} {red}| {luc}Tên FB{trang}: {vang}{name}')
+                                print(f'{luc}Id Facebook{trang}: {vang}{uid2} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
                             else:
-                                print(f'{luc}Cấu Hình Đéo Dc Id FB{trang}: {vang}{uid} {red}| {luc}Tên FB {trang}: {vang}{name}')
+                                print(f'{luc}Cấu Hình Thất Bại Id Facebook{trang}: {vang}{uid} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
                                 listck.remove(ck)
                                 continue
                         else:
-                            print(f'{luc}Thêm Cấu Hình Đéo Dc Id FB{trang}: {vang}{uid} {red}| {luc}Tên FB {trang}: {vang}{name}')
+                            print(f'{luc}Thêm Cấu Hình Thất Bại Id Facebook{trang}: {vang}{uid} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
                             listck.remove(ck)
                             continue
                     else:
-                        print(f'{luc}Thêm Cấu Hình Đéo Dc Id FB{trang}: {vang}{uid} {red}| {luc}Tên FB {trang}: {vang}{name}')
+                        print(f'{luc}Thêm Cấu Hình Thất Bại Id Facebook{trang}: {vang}{uid} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
                         listck.remove(ck)
                         continue
                 else:
-                    print(f'{luc}Cấu Hình Đéo Đc Id FB{trang}: {vang}{uid} {red}| {luc}Tên FB{trang}: {vang}{name}')
+                    print(f'{luc}Cấu Hình Thất Bại Id Facebook{trang}: {vang}{uid} {red}| {luc}Tên Tài khoản{trang}: {vang}{name}')
                     listck.remove(ck)
                     continue
             ptool = 0
@@ -901,7 +865,7 @@ def Main():
                     break
 
                 if nhiemvu == '':
-                    print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Mark Block Full, Nuôi Dc Rồi!{red}')
+                    print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block Tất Cả Tương Tác {red}')
                     listck.remove(ck)
                     ptool = 1
                     break
@@ -920,9 +884,9 @@ def Main():
                     else:
                         list_nv = listcx['data']
                         if len(list_nv) == 0:
-                            print(f'{luc}Cạn Bà Nhiệm Vụ Cảm Xúc Rồi...                         ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                            print(f'{luc}Hết Nhiệm Vụ Cảm Xúc                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Cảm Xúc  🤑💸🔫                   ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Cảm Xúc                      ', end = '\r')
                             for x in list_nv:
                                 idpost = x['id']
                                 id = idpost.split('_')[1] if '_' in idpost else idpost
@@ -932,7 +896,7 @@ def Main():
                                 like = fb.reaction(id, type)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}{type}{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(3)
+                                    Delay(0)
                                     loireaction += 1
                                 else:
                                     nhan = tds.get_xu_vip('facebook_reaction', code)
@@ -960,7 +924,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Cảm Xúc:(( {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Cảm Xúc {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('1','')
                                         break
                 
@@ -981,9 +945,9 @@ def Main():
                     else:
                         list_nv = listcxcmt['data']
                         if len(list_nv) == 0:
-                            print(f'{luc}Cạn Bà Nhiệm Vụ Cảm Xúc Cmt  Rồi                        ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                            print(f'{luc}Hết Nhiệm Vụ Cảm Xúc Cmt                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Cảm Xúc Cmt  🤑💸🔫                   ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Cảm Xúc Cmt                     ', end = '\r')
                             for x in list_nv:
                                 idpost = x['id']
                                 id = idpost.split('_')[1] if '_' in idpost else idpost
@@ -992,8 +956,8 @@ def Main():
                                 type = x['type']
                                 like = fb.reactioncmt(id, type)
                                 if like == False:
-                                    print(f"{luc}THẤT BẠI {lam}{type}CMT{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(2)
+                                    print(f"{luc}FAIL {lam}{type}CMT{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                                    Delay(0)
                                     loicxcmt += 1
                                 else:
                                     nhan = tds.get_xu_vip('facebook_reactioncmt', code)
@@ -1021,7 +985,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Cảm Xúc Cmt:(( {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Cảm Xúc Cmt {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('2','')
                                         break
 
@@ -1035,7 +999,7 @@ def Main():
                     elif 'error' in listshare:
                         if listshare['error'] == 'Thao tác quá nhanh vui lòng chậm lại':
                             count = listshare['countdown']
-                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Share, {luc}Bú coundown đi e : {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Share, {luc}COUNTDOWN: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
                             Delay(count)
                         else:
                             print(listshare['error'], end = '\r'); sleep(0); print('                                                       ', end = '\r')
@@ -1044,7 +1008,7 @@ def Main():
                         if len(list_nv) == 0:
                             print(f'{luc}Hết Nhiệm Vụ Share                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Share  🤑💸🔫                  ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Share                     ', end = '\r')
                         for x in list_nv:
                             idpost = x['id']
                             id = idpost.split('_')[1] if '_' in idpost else idpost
@@ -1053,7 +1017,7 @@ def Main():
                             like = fb.share(id)
                             if like == False:
                                 print(f"{luc}FAIL {lam}SHARE{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                Delay(2)
+                                Delay(0)
                                 loishare += 1
                             else:
                                 nhan = tds.get_xu_vip('facebook_share', code)
@@ -1081,7 +1045,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block{vang}Share:(( {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Share {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('3','')
                                         break
 
@@ -1095,7 +1059,7 @@ def Main():
                     elif 'error' in listfl:
                         if listfl['error'] == 'Thao tác quá nhanh vui lòng chậm lại':
                             count = listfl['countdown']
-                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Follow, {luc}Bú countdown đi e: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Follow, {luc}COUNTDOWN: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
                             Delay(count)
                         else:
                             print(listfl['error'], end = '\r'); sleep(0); print('                                                       ', end = '\r')
@@ -1114,7 +1078,7 @@ def Main():
                                 like = fb.follow(id)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}FOLLOW{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(2)
+                                    Delay(0)
                                     loifollow += 1
                                 else:
                                     duyet = tds.cache('facebook_follow_cache', code)
@@ -1150,7 +1114,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Follow {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Follow {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('4','')
                                         break
 
@@ -1164,7 +1128,7 @@ def Main():
                     elif 'error' in listpage:
                         if listpage['error'] == 'Thao tác quá nhanh vui lòng chậm lại':
                             count = listpage['countdown']
-                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Follow, {luc}Bú countdown đi e: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Follow, {luc}COUNTDOWN: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
                             Delay(count)
                         else:
                             print(listpage['error'], end = '\r'); sleep(0); print('                                                       ', end = '\r')
@@ -1173,7 +1137,7 @@ def Main():
                         if len(list_nv) == 0:
                             print(f'{luc}Hết Nhiệm Vụ Like Page                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Like Page  🤑💸🔫                   ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Like Page                     ', end = '\r')
                             for x in list_nv:
                                 idpost = x['id']
                                 id = idpost.split('_')[1] if '_' in idpost else idpost
@@ -1182,7 +1146,7 @@ def Main():
                                 like = fb.like_page(id)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}LIKEPAGE{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(2)
+                                    Delay(0)
                                     loipage+=1
                                 else:
                                     duyet = tds.cache('facebook_page_cache', code)
@@ -1218,7 +1182,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Like Page {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Like Page {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('5','')
                                         break
 
@@ -1232,7 +1196,7 @@ def Main():
                     elif 'error' in listgr:
                         if listgr['error'] == 'Thao tác quá nhanh vui lòng chậm lại':
                             count = listgr['countdown']
-                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Group, {luc}Bú countdown đi e: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Group, {luc}COUNTDOWN: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
                             Delay(count)
                         else:
                             print(listgr['error'], end = '\r'); sleep(0); print('                                                       ', end = '\r')
@@ -1241,14 +1205,14 @@ def Main():
                         if len(list_nv) == 0:
                             print(f'{luc}Hết Nhiệm Vụ Group                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Group  🤑💸🔫                  ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Group                     ', end = '\r')
                         for x in list_nv:
                             idpost = x['id']
                             id2 = idpost[:3]+'#'*(len(idpost)-6)+idpost[-3:]
                             like = fb.group(idpost)
                             if like == False:
                                 print(f"{luc}FAIL {lam}GROUP{trang}: {vang}{idpost}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                Delay(2)
+                                Delay(0)
                                 loigr += 1
                             else:
                                 nhan = tds.get_xu_thuong('GROUP', idpost)
@@ -1276,7 +1240,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Group {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Group {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('6','')
                                         break
 
@@ -1290,7 +1254,7 @@ def Main():
                     elif 'error' in listshare:
                         if listshare['error'] == 'Thao tác quá nhanh vui lòng chậm lại':
                             count = listshare['countdown']
-                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Share Thường, {luc}Bú countdown đi e: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Share Thường, {luc}COUNTDOWN: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
                             Delay(count)
                         else:
                             print(listshare['error'], end = '\r'); sleep(0); print('                                                       ', end = '\r')
@@ -1299,14 +1263,14 @@ def Main():
                         if len(list_nv) == 0:
                             print(f'{luc}Hết Nhiệm Vụ Share Thường                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Share Thường  🤑💸🔫                   ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Share Thường                     ', end = '\r')
                         for x in list_nv:
                             idpost = x['id']
                             id2 = idpost[:3]+'#'*(len(idpost)-6)+idpost[-3:]
                             share = fb.share(idpost)
                             if share == False:
                                 print(f"{luc}FAIL {lam}SHARE{trang}: {vang}{idpost}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                Delay(2)
+                                Delay(0)
                                 loisharet += 1
                             else:
                                 nhan = tds.get_xu_thuong('SHARE', idpost)
@@ -1334,7 +1298,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Share {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Share {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('7','')
                                         break
 
@@ -1348,7 +1312,7 @@ def Main():
                     elif 'error' in listpage:
                         if listpage['error'] == 'Thao tác quá nhanh vui lòng chậm lại':
                             count = listpage['countdown']
-                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Like Page Thường, {luc}Bú countdown đi e: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
+                            print(f'{luc}Đang Get Nhiệm Vụ {vang}Like Page Thường, {luc}COUNTDOWN: {str(round(count, 3))}              ', end = '\r'); sleep(0); print('                                                       ', end = '\r')
                             Delay(count)
                         else:
                             print(listpage['error'], end = '\r'); sleep(0); print('                                                       ', end = '\r')
@@ -1357,14 +1321,14 @@ def Main():
                         if len(list_nv) == 0:
                             print(f'{luc}Hết Nhiệm Vụ Like Page Thường                          ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
-                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Like Page Thường 🤑💸🔫                   ', end = '\r')
+                            print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Like Page Thường                    ', end = '\r')
                             for x in list_nv:
                                 idpost = x['id']
                                 id2 = idpost[:3]+'*'*(len(idpost)-6)+idpost[-3:]
                                 like = fb.like_page(idpost)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}LIKEPAGE{trang}: {vang}{idpost}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(2)
+                                    Delay(0)
                                     loipage+=1
                                 else:
                                     nhan = tds.get_xu_thuong('PAGE', idpost)
@@ -1392,7 +1356,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Like Page {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Like Page {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('8','')
                                         break
             
@@ -1423,7 +1387,7 @@ def Main():
                                 like = fb.reaction(id, 'LIKE')
                                 if like == False:
                                     print(f"{luc}FAIL {lam}LIKETHUONG{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(2)
+                                    Delay(0)
                                     loiliket+=1
                                 else:
                                     nhan = tds.get_xu_thuong('LIKE', idpost)
@@ -1451,7 +1415,7 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Like {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Like {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('9','')
                                         break
             
@@ -1472,7 +1436,7 @@ def Main():
                     else:
                         list_nv = listlike
                         if len(list_nv) == 0:
-                            print(f'{do}Hết Nhiệm Vụ Cảm Xúc Thường                          ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                            print(f'{luc}Hết Nhiệm Vụ Cảm Xúc Thường                          ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                         else:
                             print(f'{luc}Tìm Thấy {vang}{len(list_nv)} {luc}Nhiệm Vụ Cảm Xúc Thường                    ', end = '\r')
                             for x in list_nv:
@@ -1483,7 +1447,7 @@ def Main():
                                 like = fb.reaction(id, type)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}{type}{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(2)
+                                    Delay(0)
                                     loiliket+=1
                                 else:
                                     nhan = tds.get_xu_thuong(type, idpost)
@@ -1511,11 +1475,10 @@ def Main():
                                         ptool = 1
                                         break
                                     else:
-                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Bé Mark Cho Block {vang}Cảm Xúc {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
+                                        print(f'{red}Tài Khoản {vang}{name} {red}Đã Bị Block {vang}Cảm Xúc {red}                           ', end = '\r');sleep(0); print('                                                        ', end = '\r')
                                         nhiemvu = nhiemvu.replace('0','')
                                         break
                 if ptool == 1:
                     break
-     
-              
+
 Main()
