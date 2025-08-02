@@ -92,11 +92,17 @@ print(f'{Cyan}2. Nhập cookie đọc file .txt  ')
 a=input(f'{Cyan}Nhập lựa chọn của bạn: {Red}')
 if(a=='1'):
     i=1
+    list_acc = []  # ✅ KHỞI TẠO DANH SÁCH RỖNG TRƯỚC
+
+    try:
+         so_luong_cookie = int(input("Nhập số lượng cookie muốn nhập: "))
+    except ValueError:
+        print("❌ Vui lòng nhập một số hợp lệ!")
+        exit()
+
     cookieig=input(f'\n{Cyan}Nhập cookie thứ {i}: {Red}')
-    list_acc.append(cookieig)
     while len(cookieig)>1:
         i=i+1
-        cookieig=input(f'\n{Cyan}Nhập cookie thứ {i}: {Red}')
         list_acc.append(cookieig)
         break
 if(a=='2'):
@@ -106,7 +112,6 @@ if(a=='2'):
     for ck in read_ck:
         cookieig = ck.split('\n')[0]
         list_acc.append(cookieig)
-clear_terminal()
 checkfl=input(f'{Cyan}Có làm nhiệm vụ {Red}follow{Cyan} không (on/off): {Red}')
 if(checkfl=='on'):
     sofl=input(f'{Cyan}Nhập số follow/ 1 acc: {Red}')
@@ -119,7 +124,7 @@ if(checklike=='on'):
     delaylike=input(f'{Cyan}Nhap delay like: {Red}')
 chuyenacc=input(f'{Cyan}Nhập thời gian chuyển acc: {Red}')
 chuyenacc=int(chuyenacc)
-clear_terminal()
+
 ghj=input(f'{Cyan}Có sử dụng {Red}proxy{Cyan} không (on/off): {Red}')
 list_proxie=[]
 if ghj=='on':
@@ -133,7 +138,6 @@ if ghj=='on':
     for pro in read_proxy:
         proxii = pro.split('\n')[0]
         list_proxie.append(proxii)
-clear_terminal()
 print(f'{Defaut}#===========================================================#')
 print(f'{Defaut}》   {Purple}Username: {Red}{name}') 
 print(f'{Defaut}》   {Purple}Accountnumber: {Red}{len(list_acc)}')
@@ -479,15 +483,15 @@ def job():
 
 
                                 for i in range(int(delayfl),-1,-1):
-                                    print(f'{Red}[C25]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
+                                    print(f'{Red}[PHUOCAN]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
                                     sleep(0.2)
-                                    print(f'{Red}[C25]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
+                                    print(f'{Red}[PHUOCAN]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
                                     sleep(0.2)
-                                    print(f'{Red}[C25]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
+                                    print(f'{Red}[PHUOCAN]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
                                     sleep(0.2)
-                                    print(f'{Red}[C25]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
+                                    print(f'{Red}[PHUOCAN]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
                                     sleep(0.2)
-                                    print(f'{Red}[C25]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
+                                    print(f'{Red}[PHUOCAN]{Red}[{White}{str(i)}{Red}]  {Green}SLEEP {Red}[{White}|{Red}] ', end='\r')
                                     sleep(0.2)
                                 if(kkk==sofl):
                                     break
